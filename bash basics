@@ -1,0 +1,71 @@
+$which $shell - doesn't work
+$which $SHELL - it works and tells which shell we are using = /bin/bash
+
+$ echo -- it is used to print something in the terminal
+       -- ex: $ echo "zain" = echo
+
+$ nano -- it is a text editor of the terminal
+       -- ex: nano hi.sh -- hi.sh is the filename
+       -- here we can write executables bash codes
+
+$ bash hi.sh -- it runs the bash files
+
+$ ./hi.sh -- we can also run by directly telling the terminal to run the script 
+             but  there's a catch. it will not run directly.
+
+$ ls -l  -- it helps to print all the files and directories with their permission.
+         -- here we can see that our newly created sh file from the terminal don't have the execution permission or x flag
+
+$ ls -al -- this commands shows all hidden files of the current directory
+
+-- we can give any file permissions by "chmod command" 
+$ chmod +x hi.sh
+
+-- the above command will give the file excutbale permission
+
+
+
+hi.sh
+
+echo "wassup"
+
+sleep 2 (wait for 2sec)
+
+echo "Cooool"
+
+sleep 2
+
+echo "tata..."
+
+
+
+creating system variables on our own
+
+$ GOD="ZEUS"
+
+-- that's it..
+-- It's that simple the variable has been created 
+-- let's check
+
+$ echo $GOD
+$ ZEUS
+
+-- it works.. but it will not work in our sh files..
+-- in order to do that we need to export it
+
+$ export GOD
+
+-- that's it it's done..
+
+$RANDOM -- a system variable betwenn 0 to 32767    
+-- now we can use it everywhere..
+
+-- but still it's not permanent..
+-- if we close the terminal and re run it then our variable dissapears...
+
+-- we can edit the .bashrc file in the root then we can make the variable permanent
+-- we can simply save it like this `` export GOD="Zeus"
+-- the next step is to save the file and re run the terminal or relogin
+
+
+
