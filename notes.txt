@@ -1,0 +1,137 @@
+Vim editor
+
+-- vim filename.extension    
+
+to save  changes -- first press escape to goes out of writing mode then press ":w" then enter
+to save changes and quit -- press escape to goes out of writing mode then press ":wq" then enter
+to not to save and just quit -- press escape to goes out of writing mode then press ":q!" then enter
+
+press a to go into append mode.
+
+Piping:
+
+In Linux, piping is a mechanism that allows you to use the output of one command as the input for another command. It enables you to chain multiple commands together, creating a powerful and flexible way to perform complex tasks.
+
+Its primary purpose is to search for specific patterns or regular expressions within files or text streams. The name "grep" stands for "global regular expression print."
+
+ex of a pipe: ls -l /usr/bin | grep bash
+
+
+Input and output redirection are powerful concepts in Unix-like operating systems, including Linux, that allow you to control where a command takes its input from and where it sends its output. 
+
+
+output redirection: 
+
+Output redirection in Linux allows you to control where the output of a command goes. The basic syntax uses the > symbol to redirect output to a file. 
+
+1. Redirect Output to a File: Redirects standard output to a file, overwriting the file if it already exists.
+
+-- '>' is used to write into a file
+
+ex: echo hello > hello.txt = this will create a file named hello.txt and inside the file hello will be there
+
+2. Append Output to a File: Redirects standard output to a file, appending it to the end of the file if it already exists.
+
+-- '>>' is used for appending stuffs
+
+ex: echo good morning >> hello.txt = hello good morning
+
+-- rm to remove or delete file
+
+ex: rm hello.txt
+
+input redirection:
+Input redirection in Linux allows you to control where a command takes its input from. The basic syntax uses the < symbol to redirect input from a file. 
+
+'<' lesser then command 
+
+1. Redirect Input from a File: Redirects standard input from a file.
+
+ex: cat < file.txt
+
+
+wc cmd is used to print word count
+
+ex: wc -w hello.txt === this will print word count + file_name
+
+to print only word count === wc -w < hello.txt
+
+'<<' double lesser then command
+
+1. << - Here Document: A here document is a way to pass multiple lines of input to a command within a script without needing an external file.
+
+This sends multiple lines of text to the cat command. The DELIMITER is a placeholder, and you can choose any word as long as it's consistent.
+
+ex:     cat << EOF
+	this is a demo
+	writing	
+	ftuffs	
+	EOF
+
+'<<<' tripple lesser than command
+
+2. <<< - Here String: A here string is a way to provide a single line of input to a command.
+ex: grep "pattern" <<< "This is a test line with the pattern."
+
+ex: wc -w <<< "this is demo sentence"
+
+
+
+
+
+comparing stuff
+
+[hello = hello]
+echo $?
+
+[1=0]
+echo $?
+
+[1 -eq 1]
+echo $?
+
+arrays in bash scripting
+
+zain@Ubuntu:~$ arr=(1 2 3 4 5)
+zain@Ubuntu:~$ echo $arr
+1
+zain@Ubuntu:~$ echo ${arr[@]}
+1 2 3 4 5
+
+
+to define array
+
+arr=(1 2 3 4 5)
+
+to print array
+
+echo $arr     = this will not print the whole arrar, this will only print the 1st item in the array
+
+to print all the items in the array:  echo ${arr[@]}
+
+to print any item by index: echo ${arr[3]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
